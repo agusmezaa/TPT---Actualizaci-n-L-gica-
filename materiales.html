@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aportar Material | TPT</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/materias.css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenedor-header">
+            <a href="index.html" class="logo-banner" aria-label="Inicio - Tecnología para Todos">
+                <img src="img/logoTPT4.png" alt="Logo TPT" class="logo-img-banner" width="75" height="75">
+                <div class="logo-texto-lineal">
+                    <h1>Tecnología para todos</h1>
+                    <span class="tagline">Hacer simple lo que parece difícil.</span>
+                </div>
+            </a>
+            <div class="controles-accesibilidad">
+                <button class="btn-accesibilidad" title="Aumentar letra">A+</button>
+                <button class="btn-accesibilidad" title="Modo oscuro">🌓</button>
+            </div>
+        </div>
+        
+        <nav class="navegacion-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li id="nav-materiales"><a href="materiales.html" class="activo">Materiales</a></li>
+                <li><a href="sobre.html">Sobre el Proyecto</a></li>
+                <li id="item-login"><a href="login.html">Iniciar Sesión</a></li>
+                <li id="item-logout" style="display:none;"><a href="#" id="btn-cerrar-sesion">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-pagina upload-page-container">
+        
+        <!-- HERO / HEADER SECTION -->
+        <div class="upload-hero">
+            <span class="upload-badge">🚀 Comunidad TPT</span>
+            <h2>Aportá Material Educativo</h2>
+            <p>Compartí explicaciones, ejercicios o videos de YouTube para ayudar a tus compañeros. Todos los aportes son validados por docentes antes de publicarse.</p>
+        </div>
+
+        <!-- MAIN FORM CARD -->
+        <div class="upload-card">
+            <form id="form-aportar-material" class="upload-form">
+                
+                <div class="form-group">
+                    <label for="titulo-material">
+                        <span>Título del Material</span>
+                        <span class="required-star">*</span>
+                    </label>
+                    <input type="text" id="titulo-material" placeholder="Ej: Explicación de Tablas de Verdad con Ejemplos" required>
+                </div>
+
+                <!-- DYNAMIC SELECTORS GRID -->
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="select-materia">
+                            <span>Materia / Taller</span>
+                            <span class="required-star">*</span>
+                        </label>
+                        <select id="select-materia" required>
+                            <option value="">-- Seleccionar Materia --</option>
+                            <option value="Lógica Computacional">Lógica Computacional</option>
+                            <option value="Organización de las Computadoras">Organización de las Computadoras</option>
+                            <option value="Laboratorio de Algoritmos">Laboratorio de Algoritmos y Estructuras</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-modulo">
+                            <span>Módulo Específico</span>
+                            <span class="required-star">*</span>
+                        </label>
+                        <select id="select-modulo" required disabled>
+                            <option value="">-- Primero selecciona materia --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- YOUTUBE URL & LIVE PREVIEW -->
+                <div class="form-group">
+                    <label for="url-youtube">
+                        <span>URL del Video de YouTube</span>
+                        <span class="required-star">*</span>
+                    </label>
+                    <div class="input-with-icon">
+                        <span class="input-icon">📺</span>
+                        <input type="url" id="url-youtube" placeholder="https://www.youtube.com/watch?v=..." required>
+                    </div>
+                </div>
+
+                <!-- LIVE PREVIEW CONTAINER -->
+                <div id="contenedor-preview-youtube" class="youtube-preview-box" style="display: none;">
+                    <div class="preview-header">
+                        <span>Vista previa del Video</span>
+                    </div>
+                    <div class="preview-iframe-wrapper">
+                        <iframe id="iframe-preview" src="" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion-material">
+                        <span>Descripción breve o notas (Opcional)</span>
+                    </label>
+                    <textarea id="descripcion-material" rows="3" placeholder="Contanos brevemente qué se explica en este video o qué temas aborda..."></textarea>
+                </div>
+
+                <button type="submit" id="btn-submit" class="btn-submit-upload">
+                    <span>Enviar para Revisión Docente</span>
+                    <span class="btn-icon">📩</span>
+                </button>
+
+                <div id="mensaje-estado-material" class="form-feedback-msg"></div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Proyecto <strong>Tecnología para Todos</strong>. ET29 DE 6.</p>
+        <p>Desarrollado por estudiantes. Validado por Prof. Astesana y Prof. Etkin.</p>
+    </footer>
+
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/js-materiales.js"></script>
+</body>
+</html>

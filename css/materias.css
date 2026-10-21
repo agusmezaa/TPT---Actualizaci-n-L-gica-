@@ -1,15 +1,237 @@
+/* ===================================================
+   HOJA DE ESTILOS PROFESIONAL - APORTAR MATERIAL
+=================================================== */
+
+.upload-page-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.upload-hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-badge {
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.upload-hero h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.upload-hero p {
+    color: #64748b;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 620px;
+}
+
+/* Form Card Container */
+.upload-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(226, 232, 240, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.required-star {
+    color: #ef4444;
+}
+
+/* Responsive Grid for Selectors */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+@media (max-width: 640px) {
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Input Fields & Selects Styling */
+.upload-form input[type="text"],
+.upload-form input[type="url"],
+.upload-form select,
+.upload-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    color: #0f172a;
+    background-color: #f8fafc;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.upload-form input:hover,
+.upload-form select:hover,
+.upload-form textarea:hover {
+    border-color: #94a3b8;
+    background-color: #ffffff;
+}
+
+.upload-form input:focus,
+.upload-form select:focus,
+.upload-form textarea:focus {
+    outline: none;
+    border-color: #0056b3;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.12);
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.input-with-icon input {
+    padding-left: 45px !important;
+}
+
+/* YouTube Live Preview Box */
+.youtube-preview-box {
+    background: #0f172a;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.preview-header {
+    background: #1e293b;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 14px;
+}
+
+.preview-iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.preview-iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Submit Button */
+.btn-submit-upload {
+    background: #0056b3;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.25);
+    margin-top: 10px;
+}
+
+.btn-submit-upload:hover {
+    background: #004494;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 86, 179, 0.35);
+}
+
+.btn-submit-upload:active {
+    transform: translateY(0);
+}
+
+.form-feedback-msg {
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   ESTILOS DE PÁGINAS DE MATERIAS Y TEMAS (restaurados)
+   Estas reglas se habían perdido al reescribir este archivo en el commit
+   a34fedc (panel docente). Las usan mat-*.html, intro*.html y las páginas
+   de cada tema (video + sidebar).
+   ========================================================================== */
+
 /* ========================================================
    ESTILOS ESPECÍFICOS: PÁGINAS DE MATERIAS Y TEMAS
    ======================================================== */
 
 /* Contenedor general para dar respiro lateral */
-.contenedor-pagina {
+.contenedor-pagina:not(.upload-page-container) {
     padding: 2rem;
     width: 100%; /* Ahora sí, ocupa todo el ancho de la pantalla */
     margin: 0 auto;
 }
 
-.contenedor-pagina p {
+.contenedor-pagina:not(.upload-page-container) p {
     max-width: 800px; /* Limita la lectura a un ancho cómodo */
 }
 
@@ -258,7 +480,7 @@
 /* Grilla responsive para la pantalla del video */
 .contenedor-recurso {
     display: grid;
-    grid-template-columns: 1fr; /* Por defecto (celular): 1 columna */
+    grid-template-columns: minmax(0, 1fr); /* Por defecto (celular): 1 columna; minmax evita que el contenido ensanche la página */
     gap: 2rem;
     margin-top: 1rem;
 }
@@ -272,6 +494,7 @@
 }
 
 .recurso-principal {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -308,6 +531,7 @@
 
 /* Sidebar derecho */
 .recurso-sidebar {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -370,4 +594,22 @@
     font-size: 0.9rem;
     min-height: auto;
     border-radius: 6px;
+}
+
+/* Enlace "Saltar al contenido": oculto hasta que recibe foco con el teclado (accesibilidad) */
+.saltar-contenido {
+    position: absolute;
+    left: 0.5rem;
+    top: -4rem;
+    z-index: 2000;
+    padding: 0.6rem 1rem;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.saltar-contenido:focus {
+    top: 0.5rem;
 }
